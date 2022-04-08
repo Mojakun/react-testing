@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import RenderInput from './RenderInput';
 
 function App() {
+  const outputConsole = useCallback((e)=>{
+    console.log(e)
+  })
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
+        <RenderInput outputConsole={outputConsole}/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
