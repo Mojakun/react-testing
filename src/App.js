@@ -4,23 +4,24 @@ import { Counter } from './features/counter/Counter';
 import './App.css';
 import RenderInput from './RenderInput';
 import FrameworkList from './FrameworkList';
+import UseEffectRender from './UseEffectRender';
 
 function App() {
   const data = [
     {
-      id:1,
-      item:"React"
+      id: 1,
+      item: "React"
     },
     {
-      id:2,
-      item:"Angular"
+      id: 2,
+      item: "Angular"
     },
     {
-      id:3,
-      item:"Vue"
+      id: 3,
+      item: "Vue"
     }
   ]
-  const outputConsole = useCallback((e)=>{
+  const outputConsole = useCallback((e) => {
     console.log(e)
   })
   return (
@@ -28,8 +29,9 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
-        <RenderInput outputConsole={outputConsole}/>
-        <FrameworkList frameworks={data}/>
+        <RenderInput outputConsole={outputConsole} />
+        <FrameworkList frameworks={data} />
+        <UseEffectRender />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
